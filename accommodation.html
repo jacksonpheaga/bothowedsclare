@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Botho &amp; Clare Urio | Accommodation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#e7d7b6",
+              "background-light": "#f8f6f2",
+              "background-dark": "#111111",
+              "deep-black": "#111111",
+              champagne: "#e8d8b8",
+              taupe: "#81796a",
+              pink: "#ebceca",
+            },
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background-light text-deep-black font-display antialiased">
+    <header class="sticky top-0 z-50 w-full px-8 md:px-20 py-8 flex items-center justify-between bg-background-light/95 backdrop-blur-md border-b border-primary/10">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-taupe scale-75">flare</span>
+        <h2 class="text-sm font-semibold tracking-[0.3em] uppercase">B&amp;C</h2>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium text-deep-black/70">
+        <a class="hover:text-deep-black transition-colors" href="home.html">Our Story</a>
+        <a class="hover:text-deep-black transition-colors" href="rsvp.html">RSVP</a>
+        <a class="hover:text-deep-black transition-colors" href="venue.html">Venue</a>
+        <a class="hover:text-deep-black transition-colors border-b border-primary/40 pb-1" href="accommodation.html">Accommodation</a>
+        <a class="hover:text-deep-black transition-colors" href="attire.html">Attire</a>
+        <a class="hover:text-deep-black transition-colors" href="wishlist.html">Wishlist</a>
+      </nav>
+      <div class="md:hidden" id="mobile-menu-btn">
+        <span class="material-symbols-outlined cursor-pointer">menu</span>
+      </div>
+    </header>
+    <div id="mobile-menu" class="fixed inset-0 z-[200] bg-background-light flex-col hidden" aria-hidden="true">
+      <div class="flex items-center justify-between px-8 py-8 border-b border-primary/20">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-taupe scale-75">flare</span>
+          <h2 class="text-sm font-semibold tracking-[0.3em] uppercase">B&amp;C</h2>
+        </div>
+        <button id="close-mobile-menu" aria-label="Close menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="flex flex-col items-center justify-center flex-1 gap-10 text-base uppercase tracking-[0.3em] font-medium text-deep-black/70">
+        <a href="home.html" class="hover:text-deep-black transition-colors">Our Story</a>
+        <a href="rsvp.html" class="hover:text-deep-black transition-colors">RSVP</a>
+        <a href="venue.html" class="hover:text-deep-black transition-colors">Venue</a>
+        <a href="accommodation.html" class="hover:text-deep-black transition-colors border-b border-primary/40 pb-1">Accommodation</a>
+        <a href="attire.html" class="hover:text-deep-black transition-colors">Attire</a>
+        <a href="wishlist.html" class="hover:text-deep-black transition-colors">Wishlist</a>
+      </nav>
+    </div>
+
+    <main>
+      <section class="relative min-h-[52vh] px-6 md:px-20 flex items-center justify-center text-center overflow-hidden">
+        <img src="Assets/destination22.jpg" alt="Francistown accommodation" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="relative z-10 max-w-3xl text-white py-20">
+          <p class="text-xs uppercase tracking-[0.35em] font-bold mb-5">Accommodation</p>
+          <h1 class="text-5xl md:text-7xl font-extralight italic leading-tight mb-6">Stay In Francistown</h1>
+          <p class="text-white/85 leading-relaxed">
+            A practical shortlist of hotels and guesthouses for guests travelling to celebrate Botho and Clare at Adansonia Hotel.
+          </p>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="bg-white border border-primary/25 rounded-lg overflow-hidden shadow-sm">
+            <div class="h-44 bg-cover bg-center" style="background-image: url(Assets/destination22.jpg)"></div>
+            <div class="p-7">
+              <p class="text-[10px] uppercase tracking-[0.28em] text-taupe font-bold mb-3">At The Venue</p>
+              <h2 class="text-2xl font-light italic mb-3">Adansonia Hotel</h2>
+              <p class="text-slate-600 leading-relaxed mb-5">Best for guests who want to stay where the celebration is happening.</p>
+              <p class="text-sm text-slate-500 mb-5">Plot 32621, Tati River South Road</p>
+              <a class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-deep-black" href="https://adansoniahotel.co.bw/" target="_blank" rel="noopener">
+                Contact Hotel <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </article>
+          <article class="bg-white border border-primary/25 rounded-lg overflow-hidden shadow-sm">
+            <div class="h-44 bg-cover bg-center" style="background-image: url(hotels/kievits.jpg)"></div>
+            <div class="p-7">
+              <p class="text-[10px] uppercase tracking-[0.28em] text-taupe font-bold mb-3">Hotel</p>
+              <h2 class="text-2xl font-light italic mb-3">Cresta Marang Gardens</h2>
+              <p class="text-slate-600 leading-relaxed mb-5">A full-service hotel option in the Tati River Plots area.</p>
+              <p class="text-sm text-slate-500 mb-5">Old Matsiloje Road, Tati River Plots</p>
+              <a class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-deep-black" href="https://www.crestahotels.com/" target="_blank" rel="noopener">
+                View Hotel <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </article>
+          <article class="bg-white border border-primary/25 rounded-lg overflow-hidden shadow-sm">
+            <div class="h-44 bg-cover bg-center" style="background-image: url(hotels/anew.jpg)"></div>
+            <div class="p-7">
+              <p class="text-[10px] uppercase tracking-[0.28em] text-taupe font-bold mb-3">Central Hotel</p>
+              <h2 class="text-2xl font-light italic mb-3">Cresta Thapama</h2>
+              <p class="text-slate-600 leading-relaxed mb-5">A central Francistown hotel with restaurant, pool, and airport transfer facilities listed.</p>
+              <p class="text-sm text-slate-500 mb-5">Plot 6386, Francistown</p>
+              <a class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-deep-black" href="https://www.crestahotels.com/" target="_blank" rel="noopener">
+                View Hotel <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </article>
+          <article class="bg-white border border-primary/25 rounded-lg overflow-hidden shadow-sm">
+            <div class="h-44 bg-cover bg-center" style="background-image: url(Assets/destination12.jpg)"></div>
+            <div class="p-7">
+              <p class="text-[10px] uppercase tracking-[0.28em] text-taupe font-bold mb-3">Guest House</p>
+              <h2 class="text-2xl font-light italic mb-3">City Square Guest House</h2>
+              <p class="text-slate-600 leading-relaxed mb-5">A Block 3 guesthouse with bed-and-breakfast rooms and free Wi-Fi listed.</p>
+              <p class="text-sm text-slate-500 mb-5">Plot 10078, Block 3</p>
+              <a class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-deep-black" href="https://www.citysquare.co.bw/" target="_blank" rel="noopener">
+                View Guest House <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </article>
+          <article class="bg-white border border-primary/25 rounded-lg overflow-hidden shadow-sm">
+            <div class="h-44 bg-cover bg-center" style="background-image: url(Assets/destination3.webp)"></div>
+            <div class="p-7">
+              <p class="text-[10px] uppercase tracking-[0.28em] text-taupe font-bold mb-3">Guesthouse</p>
+              <h2 class="text-2xl font-light italic mb-3">Comfort Palace Guesthouse</h2>
+              <p class="text-slate-600 leading-relaxed mb-5">A Selepa guesthouse option with parking, Wi-Fi, and airport shuttle details listed online.</p>
+              <p class="text-sm text-slate-500 mb-5">Selepa, Francistown</p>
+              <a class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-deep-black" href="https://www.booking.com/hotel/bw/comfort-palace-guesthouse.en-gb.html" target="_blank" rel="noopener">
+                View Guesthouse <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </article>
+          <article class="bg-white border border-primary/25 rounded-lg overflow-hidden shadow-sm">
+            <div class="h-44 bg-cover bg-center" style="background-image: url(Assets/tati.webp)"></div>
+            <div class="p-7">
+              <p class="text-[10px] uppercase tracking-[0.28em] text-taupe font-bold mb-3">Nearby Options</p>
+              <h2 class="text-2xl font-light italic mb-3">Tati River Lodge &amp; Diggers Inn</h2>
+              <p class="text-slate-600 leading-relaxed mb-5">Additional Francistown options guests can compare for location, availability, and budget.</p>
+              <p class="text-sm text-slate-500 mb-5">Francistown</p>
+              <a class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-deep-black" href="https://www.google.com/maps/search/?api=1&query=Francistown%20hotels%20near%20Adansonia%20Hotel" target="_blank" rel="noopener">
+                Search Nearby <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var menuBtn = document.getElementById("mobile-menu-btn");
+        var mobileMenu = document.getElementById("mobile-menu");
+        var closeBtn = document.getElementById("close-mobile-menu");
+        if (!menuBtn || !mobileMenu || !closeBtn) return;
+        function openMenu() {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          mobileMenu.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+          mobileMenu.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+        menuBtn.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeMenu();
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,610 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Botho &amp; Clare Urio | Venue</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#e7d7b6",
+              "background-light": "#f8f6f2",
+              "background-dark": "#111111",
+              "deep-black": "#111111",
+              champagne: "#e8d8b8",
+              taupe: "#81796a",
+                  pink: "#ebceca",
+              heavyPink: "#edabad"
+            },
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .type-kicker {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+      }
+      .type-section-title {
+        letter-spacing: -0.01em;
+      }
+      .type-card-title {
+        letter-spacing: -0.01em;
+      }
+      .type-body {
+        line-height: 1.7;
+      }
+      .type-meta {
+        letter-spacing: 0.01em;
+      }
+      .type-button {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      .silk-texture {
+        background-image: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(235, 233, 228, 0.2) 50%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
+      }
+      .hover-border-taupe:hover {
+        box-shadow: 0 0 0 2px #81796a;
+      }
+      .editorial-shadow {
+        box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- Minimalist Navigation Bar -->
+    <header
+      class="sticky top-0 z-50 w-full px-8 md:px-20 py-8 flex items-center justify-between bg-background-light/95 backdrop-blur-md border-b border-primary/10"
+    >
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-taupe scale-75">flare</span>
+        <h2 class="text-sm font-semibold tracking-[0.3em] uppercase">
+          B&amp;C
+        </h2>
+      </div>
+      <nav
+        class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium text-deep-black/70"
+      >
+        <a class="hover:text-deep-black transition-colors" href="home.html"
+          >Our Story</a
+        >
+        <a class="hover:text-deep-black transition-colors" href="rsvp.html"
+          >RSVP</a
+        >
+        <a class="hover:text-deep-black transition-colors" href="venue.html"
+          >Venue</a
+        >
+        <a class="hover:text-deep-black transition-colors" href="accommodation.html"
+          >Accommodation</a
+        >
+        <a class="hover:text-deep-black transition-colors" href="attire.html"
+          >Attire</a
+        >
+        <a class="hover:text-deep-black transition-colors" href="wishlist.html"
+          >Wishlist</a
+        >
+      </nav>
+      <div class="md:hidden" id="mobile-menu-btn">
+        <span class="material-symbols-outlined cursor-pointer">menu</span>
+      </div>
+    </header>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[200] bg-background-light flex-col hidden" aria-hidden="true">
+      <div class="flex items-center justify-between px-8 py-8 border-b border-primary/20">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-taupe scale-75">flare</span>
+          <h2 class="text-sm font-semibold tracking-[0.3em] uppercase">B&amp;C</h2>
+        </div>
+        <button id="close-mobile-menu" aria-label="Close menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="flex flex-col items-center justify-center flex-1 gap-10 text-base uppercase tracking-[0.3em] font-medium text-deep-black/70">
+        <a href="home.html" class="hover:text-deep-black transition-colors">Our Story</a>
+        <a href="rsvp.html" class="hover:text-deep-black transition-colors">RSVP</a>
+        <a href="venue.html" class="hover:text-deep-black transition-colors border-b border-primary/40 pb-1">Venue</a>
+        <a href="accommodation.html" class="hover:text-deep-black transition-colors">Accommodation</a>
+        <a href="attire.html" class="hover:text-deep-black transition-colors">Attire</a>
+        <a href="wishlist.html" class="hover:text-deep-black transition-colors">Wishlist</a>
+      </nav>
+    </div>
+    <main class="relative overflow-hidden silk-texture">
+      <!-- Hero Section -->
+      <section class="relative pt-20 pb-12 px-6">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
+          <span class="type-kicker text-primary font-bold">The Journey</span>
+          <h2
+            class="type-section-title text-5xl md:text-7xl font-extralight tracking-tighter text-slate-900 dark:text-slate-100"
+          >
+            Journey With Us
+          </h2>
+          <p
+            class="type-body text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-sm leading-relaxed font-light"
+          >
+            A collection of refined spaces and pathways curated for our sacred
+            union. Explore the venues and accommodations selected for your
+            comfort.
+          </p>
+        </div>
+      </section>
+      <!-- Visual Anchor -->
+      <section class="w-full h-[400px] relative overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900/40 z-10"></div>
+        <img
+          alt="Elegant wedding venue architecture"
+          class="w-full h-full object-cover grayscale-[20%]"
+          data-alt="Luxurious golden-hour view of a grand cathedral and ballroom entrance"
+          loading="lazy"
+          decoding="async"
+          src="Assets/destination22.jpg"
+        />
+        <div class="absolute inset-0 z-20 flex items-center justify-center">
+          <div class="text-center">
+            <p class="type-kicker text-white mb-4">The Destination</p>
+            <h2 class="type-section-title text-white text-4xl italic">
+              Francistown, Botswana
+            </h2>
+          </div>
+        </div>
+      </section>
+      <!-- Main Venue Spotlight -->
+      <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+        <div
+          class="group relative bg-white dark:bg-slate-900 rounded-xl overflow-hidden editorial-shadow hover-border-taupe transition-all duration-500"
+        >
+          <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-3/5 h-[400px] lg:h-[600px] relative">
+              <img
+                alt="Adansonia Hotel wedding venue"
+                class="w-full h-full object-cover"
+                data-alt="Adansonia Hotel wedding and conference venue in Francistown"
+                loading="lazy"
+                decoding="async"
+                src="Assets/destination22.jpg"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:hidden"
+              ></div>
+            </div>
+            <div
+              class="w-full lg:w-2/5 p-8 lg:p-16 flex flex-col justify-center bg-silk-white dark:bg-slate-900/50"
+            >
+              <span class="type-kicker text-primary mb-4">The Sanctuary</span>
+              <h3
+                class="type-section-title text-3xl font-light mb-6 tracking-tight"
+              >
+                Adansonia Hotel
+              </h3>
+              <p
+                class="type-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 font-light italic"
+              >
+                "A warm Francistown setting for family, friendship, and a
+                celebration filled with love."
+              </p>
+              <div class="space-y-4 mb-10">
+                <div class="flex items-center gap-4">
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >location_on</span
+                  >
+                  <p
+                    class="type-meta text-xs tracking-wide text-slate-600 dark:text-slate-300"
+                  >
+                    Plot 32621, Tati River South Road, Francistown, Botswana
+                  </p>
+                </div>
+                <div class="flex items-center gap-4 align-items-center">
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >event_available</span
+                  >
+                  <p
+                    class="type-meta text-xs tracking-wide text-slate-600 dark:text-slate-300"
+                  >
+                    Saturday, 12th December 2026
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Adansonia%20Hotel%20Plot%2032621%20Tati%20River%20South%20Road%20Francistown%20Botswana"
+                  target="_blank"
+                  class="type-button bg-slate-900 dark:bg-primary text-white dark:text-background-dark px-8 py-3 rounded-full"
+                >
+                  Get Directions
+                </a>
+                <a
+                  href="https://adansoniahotel.co.bw/"
+                  target="_blank"
+                  class="type-button border border-slate-200 dark:border-slate-700 px-8 py-3 rounded-full hover:bg-slate-50 transition-colors"
+                >
+                  Explore Venue
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accommodation Grid -->
+      <!-- Content Container -->
+      <div class="max-w-6xl mx-auto px-6 py-16">
+        <!-- Venue Section -->
+        <section class="mb-20">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl"
+              >hotel</span
+            >
+            <h2
+              class="type-section-title font-light text-3xl text-bronze uppercase tracking-tight"
+            >
+              Stay With Us
+            </h2>
+          </div>
+          <div
+            class="group relative bg-white dark:bg-slate-900 rounded-xl overflow-hidden editorial-shadow hover-border-taupe transition-all duration-500 mb-20 flex flex-col lg:flex-row"
+          >
+            <div
+              class="lg:w-1/2 h-80 lg:h-auto bg-cover bg-center"
+              data-alt="Comfortable Francistown hotel accommodation"
+              style="background-image: url(hotels/anew.jpg)"
+            ></div>
+            <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+              <h3 class="type-card-title text-2xl text-bronze mb-4">
+                Adansonia Hotel, Francistown
+              </h3>
+              <p class="type-body text-slate-700 leading-relaxed mb-6">
+                Guests who prefer to stay close to the celebration may enquire directly with Adansonia Hotel for room availability, rates, and booking details once the final wedding arrangements are shared.
+              </p>
+              <div class="space-y-3 mb-8">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary"
+                    >map</span
+                  >
+                  <p class="type-meta text-slate-600 text-sm">
+                    Plot 32621, Tati River South Road, Francistown, Botswana
+                  </p>
+                </div>
+              </div>
+              <a
+                class="group relative inline-flex items-center justify-center gap-2 px-10 py-4 bg-pink text-deep-black text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-taupe hover:text-white border border-taupe/30 w-full md:w-max"
+                data-location="Francistown, Botswana"
+                target="_blank"
+                rel="noopener"
+                href="https://adansoniahotel.co.bw/"
+              >
+                <span class="relative z-10 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm">directions</span>
+                  Contact Hotel
+                </span>
+                <div class="absolute inset-0 border border-taupe translate-x-1 translate-y-1 opacity-50 hover:border-champagne group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300"></div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative bg-white dark:bg-slate-900 rounded-xl overflow-hidden editorial-shadow hover-border-taupe transition-all duration-500 mb-5 flex flex-col lg:flex-row"
+          >
+            <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+              <h3 class="type-card-title text-2xl text-bronze mb-4">
+                Nearby Francistown Accommodation
+              </h3>
+              <p class="type-body text-slate-700 leading-relaxed mb-6">
+                Additional accommodation options around Francistown will be confirmed as the wedding details are finalized. Please check back here for nearby recommendations suited to the celebration weekend.
+              </p>
+              <div class="space-y-3 mb-8">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary"
+                    >map</span
+                  >
+                  <p class="type-meta text-slate-600 text-sm">
+                    Francistown, Botswana
+                  </p>
+                </div>
+              </div>
+              <a
+                class="group relative inline-flex items-center justify-center gap-2 px-10 py-4 bg-pink text-deep-black text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-taupe hover:text-white border border-taupe/30 w-full md:w-max"
+                data-location="Francistown, Botswana"
+                target="_blank"
+                rel="noopener"
+                href="https://www.google.com/maps/search/?api=1&query=hotels%20near%20Adansonia%20Hotel%20Francistown%20Botswana"
+              >
+                <span class="relative z-10 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm">directions</span>
+                  View Nearby Stays
+                </span>
+                <div class="absolute inset-0 border border-taupe translate-x-1 translate-y-1 opacity-50 hover:border-champagne group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300"></div>
+              </a>
+            </div>
+            <div
+              class="order-first lg:order-none lg:w-1/2 h-80 lg:h-auto bg-cover bg-center"
+              data-alt="Comfortable Francistown hotel accommodation"
+              style="background-image: url(hotels/kievits.jpg)"
+            ></div>
+          </div>
+        </section>
+
+        <!-- Travel Tips -->
+        <section>
+          <div class="flex items-center gap-3 mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl"
+              >info</span
+            >
+            <h2
+              class="type-section-title text-3xl font-light text-bronze uppercase tracking-tight"
+            >
+              Travel Notes
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="flex gap-4 p-6 bg-cream/60 rounded-xl border border-primary/20"
+            >
+              <div class="flex-shrink-0">
+                <span
+                  class="material-symbols-outlined text-4xl text-primary font-light"
+                  >flight_takeoff</span
+                >
+              </div>
+              <div>
+                <h5 class="type-card-title text-bronze mb-1">Getting Here</h5>
+                <p class="type-body text-slate-600 text-sm">
+                  Francistown is accessible by road and through Francistown Airport. Guests travelling from outside the city are encouraged to confirm routes and accommodation early.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 p-6 bg-cream/60 rounded-xl border border-primary/20"
+            >
+              <div class="flex-shrink-0">
+                <span
+                  class="material-symbols-outlined text-4xl text-primary font-light"
+                  >thermostat</span
+                >
+              </div>
+              <div>
+                <h5 class="type-card-title text-bronze mb-1">Summer Weather</h5>
+                <p class="type-body text-slate-600 text-sm">
+                  December brings warm summer light and long celebratory
+                  evenings. Lightweight formal layers are recommended for comfort
+                  between the ceremony and reception.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 p-6 bg-cream/60 rounded-xl border border-primary/20"
+            >
+              <div class="flex-shrink-0">
+                <span
+                  class="material-symbols-outlined text-4xl text-primary font-light"
+                  >local_taxi</span
+                >
+              </div>
+              <div>
+                <h5 class="type-card-title text-bronze mb-1">
+                  Local Transport
+                </h5>
+                <p class="type-body text-slate-600 text-sm">
+                  Guests are encouraged to use their personal vehicles to attend
+                  the ceremony for ease of commuting to your preferred
+                  accommodation.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 p-6 bg-cream/60 rounded-xl border border-primary/20"
+            >
+              <div class="flex-shrink-0">
+                <span
+                  class="material-symbols-outlined text-4xl text-primary font-light"
+                  >wine_bar</span
+                >
+              </div>
+              <div>
+                <h5 class="type-card-title text-bronze mb-1">
+                  Local Attractions
+                </h5>
+                <p class="type-body text-slate-600 text-sm">
+                  You are free and welcome to visit any and all other
+                  attractions in Francistown and the surrounding areas. Local recommendations will be shared as the wedding weekend details are finalized.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Footer Call to Action -->
+      <section class="max-w-7xl mx-auto px-6 py-24 text-center">
+        <div
+          class="p-8 md:p-16 rounded-xl bg-slate-900 text-white relative overflow-hidden"
+        >
+          <div class="absolute inset-0 opacity-20">
+            <img
+              alt="Elegant background"
+              class="w-full h-full object-cover"
+              data-alt="Soft out of focus luxury silk pattern"
+              loading="lazy"
+              decoding="async"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtZHo1yISFfTqSTMksSPLNSPtRqI1ATKegAPvKV8TRCYkpDJ0VgC_bd7pWyNUX5fAgl2ImvDfKrRFucCyR1MfqyhdPtQqAK1o-kw7pRQePLmGy7MgCyFTkR2S8UZEjstcy5Sarq95nt7dpDCQFQA4LNGB-KXVt_tfd_pVyzCiIpysFovW5Nxk_U0BGBtbfvESZ01U2afuHrboQqn04XgoUsbB8mQmheluGxGRU12SKbcQQnCjJ5rttzLASyKWQgyQxtgBa6uBALQxo"
+            />
+          </div>
+          <div class="relative z-10 space-y-8">
+            <h4 class="type-section-title text-3xl font-light tracking-tight">
+              Need a hand?
+            </h4>
+            <p
+              class="type-body text-slate-400 text-sm max-w-lg mx-auto font-light"
+            >
+              Our dedicated wedding overseers are available to handle any and
+              all questions, concerns, or special requests for your journey.
+            </p>
+            <button
+              id="open-overseers-modal"
+              type="button"
+              class="group relative inline-flex items-center justify-center px-10 py-4 bg-pink text-deep-black text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-taupe hover:text-white border border-taupe/30"
+            >
+              <span class="relative z-10">Contact overseers</span>
+              <div class="absolute inset-0 border border-taupe translate-x-1 translate-y-1 opacity-50 hover:border-champagne group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300"></div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div
+      id="overseers-modal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center p-6"
+      aria-hidden="true"
+    >
+      <div
+        id="overseers-modal-overlay"
+        class="absolute inset-0 bg-black/50 backdrop-blur-[2px]"
+      ></div>
+      <div
+        class="relative w-full max-w-3xl rounded-xl border border-primary/25 bg-background-light p-8 md:p-10 shadow-2xl"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="overseers-modal-title"
+      >
+        <h3
+          id="overseers-modal-title"
+          class="type-section-title text-2xl md:text-3xl font-light tracking-tight text-slate-900 mb-8"
+        >
+          Contact Overseers
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+          <div class="pr-0 md:pr-10">
+            <h4 class="type-card-title text-lg text-slate-900">Bose Njabulo</h4>
+            <p class="type-body italic mb-4">Maid of Honor/Bride's Sister</p>
+            <div class="space-y-2 text-sm text-slate-600 type-meta">
+              <p>Phone: <a href="tel:+26775547296" class="text-taupe hover:underline">+267 75 547 296</a></p>
+              <p>Email: <a href="mailto:bosencube@gmail.com" class="text-taupe hover:underline">bosencube@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="relative pl-0 md:pl-10">
+            <div
+              class="hidden md:block absolute left-0 top-0 bottom-0 w-px bg-slate-300"
+            ></div>
+            <h4 class="type-card-title text-lg text-slate-900">
+              Lekgotla Lesolle
+            </h4>
+            <p class="type-body italic mb-4">Best Man/Groom's Brother</p>
+            <div class="space-y-2 text-sm text-slate-600 type-meta">
+              <p>Phone: <a href="tel:+26775076420" class="text-taupe hover:underline">+267 75 076 420</a></p>
+              <p>Email: <a href="mailto:lesolle777@gmail.com" class="text-taupe hover:underline">lesolle777@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex justify-end">
+          <button
+            id="close-overseers-modal"
+            type="button"
+            class="group relative inline-flex items-center justify-center px-8 py-3 bg-pink text-deep-black text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-taupe hover:text-white border border-taupe/30"
+          >
+            <span class="relative z-10">Close</span>
+            <div class="absolute inset-0 border border-taupe translate-x-1 translate-y-1 opacity-50 hover:border-champagne group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var menuBtn = document.getElementById("mobile-menu-btn");
+        var mobileMenu = document.getElementById("mobile-menu");
+        var closeBtn = document.getElementById("close-mobile-menu");
+        if (!menuBtn || !mobileMenu || !closeBtn) return;
+        function openMenu() {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          mobileMenu.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+          mobileMenu.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+        menuBtn.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeMenu();
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const openBtn = document.getElementById("open-overseers-modal");
+        const modal = document.getElementById("overseers-modal");
+        const overlay = document.getElementById("overseers-modal-overlay");
+        const closeBtn = document.getElementById("close-overseers-modal");
+
+        if (!openBtn || !modal || !overlay || !closeBtn) {
+          return;
+        }
+
+        function openModal() {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          modal.setAttribute("aria-hidden", "false");
+        }
+
+        function closeModal() {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          modal.setAttribute("aria-hidden", "true");
+        }
+
+        openBtn.addEventListener("click", openModal);
+        closeBtn.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeModal();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+
+
